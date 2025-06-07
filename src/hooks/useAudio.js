@@ -14,18 +14,15 @@ const useAudio = (audioUrls) => {
   }
 
   useEffect(() => {
-    // Select a random audio file when the hook is initialized
     const selectedAudioUrl = getRandomAudioUrl()
     if (!selectedAudioUrl) return
 
     setCurrentAudioUrl(selectedAudioUrl)
 
-    // Create new Audio instance with the selected URL
     const audio = new Audio(selectedAudioUrl)
     audio.loop = true
     audioRef.current = audio
 
-    // Cleanup function
     return () => {
       if (audioRef.current) {
         audioRef.current.pause()
@@ -70,7 +67,7 @@ const useAudio = (audioUrls) => {
       if (audioRef.current) {
         audioRef.current.pause()
         audioRef.current.currentTime = 0
-        audioRef.current = null // Clear the reference to allow new random selection
+        audioRef.current = null
       }
       return true
     } catch (error) {

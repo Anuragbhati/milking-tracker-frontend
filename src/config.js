@@ -1,5 +1,5 @@
 const config = {
-  API_BASE_URL: 'http://localhost:5000',
+  API_BASE_URL: import.meta.env.VITE_SERVER_URL || 'http://localhost:5000',
   AUDIO_FILES: [
     '/relaxing-music-1.mp3',
     '/relaxing-music-2.mp3',
