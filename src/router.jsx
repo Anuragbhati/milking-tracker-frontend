@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from './components/Layout';
 import App from './App';
-import MilkingHistory from './MilkingHistory';
 import styled from 'styled-components';
+import MilkingHistory from './components/MilkingHistory';
 
 const ErrorContainer = styled.div`
   display: flex;
