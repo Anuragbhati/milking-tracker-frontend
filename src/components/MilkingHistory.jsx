@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { fetchMilkingSessions } from './services/api'
+import { fetchMilkingSessions } from '../services/api'
 
 const Container = styled.div`
   max-width: 1000px;
